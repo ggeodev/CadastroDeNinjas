@@ -1,9 +1,7 @@
-package com.example.CadastroDeNinjas;
+package Ninjas;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import Missoes.MissoesModel;
+import jakarta.persistence.*;
 import org.hibernate.annotations.Audited;
 
 @Entity
@@ -17,6 +15,12 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
+
+    // @ManyToOne um ninja tem uma única missão
+    @ManyToOne
+    @JoinColumn (name = "missoes_id") // chave estrangeira
+    private MissoesModel missoes;
+
 
     public NinjaModel(String nome, int idade, String email) {
         this.nome = nome;
