@@ -1,4 +1,4 @@
-package Missoes;
+package com.example.CadastroDeNinjas.Missoes;
 
 public enum MissoesRankEnum {
     D,
