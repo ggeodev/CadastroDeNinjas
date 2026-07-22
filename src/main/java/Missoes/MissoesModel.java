@@ -18,8 +18,14 @@ public class MissoesModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column (name = "id")
     private Long id;
+
+    @Column (name = "nome_da_missao")
     private String nomeMissao;
+
+    @Column (name = "rank_da_missao")
     private MissoesRankEnum rank;
 
     @OneToMany (mappedBy = "missoes")
