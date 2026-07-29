@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Audited;
 
 @Entity
+@Table(name = "tb_cadastro")
 @Audited.Table
 @NoArgsConstructor
 @AllArgsConstructor
