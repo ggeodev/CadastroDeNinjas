@@ -1,6 +1,7 @@
 package com.example.CadastroDeNinjas.Missoes;
 
 import com.example.CadastroDeNinjas.Ninjas.NinjaModel;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -14,6 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+
 public class MissoesModel {
 
     @Id
@@ -28,6 +30,7 @@ public class MissoesModel {
     @Column (name = "rank_da_missao")
     private String rank;
 
+    @JsonIgnore
     @OneToMany (mappedBy = "missoes")
     private List<NinjaModel> ninjas;
 
